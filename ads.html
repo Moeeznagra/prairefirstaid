@@ -1,0 +1,547 @@
+[slides]
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Share Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* 1. THE SETUP - High-end, professional foundation */
+        * {
+            box-sizing: border-box;
+        }
+
+        p {
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        body {
+            background-color: #0f172a;
+            /* Dark Slate Background */
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr;
+            margin: 0;
+            min-height: 100vh;
+            padding: 20px 0;
+            place-items: center;
+        }
+
+        .slide-container {
+            align-items: center;
+            background-color: #1e293b;
+            /* Darker Blue/Slate */
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            font-family: 'Inter', sans-serif;
+            height: 720px;
+            justify-content: center;
+            overflow: hidden;
+            padding: 60px;
+            position: relative;
+            width: 1280px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ABSTRACT BACKGROUND DESIGN - Modern safety motif */
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .slide-container::after {
+            content: '';
+            position: absolute;
+            bottom: -5%;
+            left: -5%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(234, 179, 8, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .slide-container>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 2. TYPOGRAPHY */
+        .slide-container h1,
+        .slide-container h2,
+        .slide-container h3 {
+            color: #f8fafc;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+        }
+
+        .slide-container p,
+        .slide-container li,
+        .slide-container .subtitle,
+        .slide-container th,
+        .slide-container td {
+            color: #cbd5e1;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .slide-container h1 {
+            font-size: 80px;
+            font-weight: 700;
+            color: #22c55e;
+        }
+
+        /* Safety Green */
+        .slide-container .slide-title {
+            font-size: 48px;
+            margin-bottom: 40px;
+            text-align: left;
+            width: 100%;
+            border-left: 6px solid #eab308;
+            padding-left: 20px;
+        }
+
+        /* Caution Yellow Accent */
+        .slide-container h3 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #eab308;
+        }
+
+        .slide-container .subtitle {
+            font-size: 24px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* 3. LAYOUTS */
+        .title-layout {
+            text-align: center;
+        }
+
+        .section-title-layout {
+            text-align: center;
+        }
+
+        .section-title-layout h2 {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .section-title-layout hr {
+            border: none;
+            height: 4px;
+            background: #22c55e;
+            width: 100px;
+            margin: 30px auto;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            width: 100%;
+        }
+
+        .two-column.tiled>div {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tiled-content {
+            display: flex;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .tile {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tile .icon {
+            font-size: 50px;
+            color: #22c55e;
+            margin-bottom: 25px;
+        }
+
+        .image-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            height: 380px;
+            width: 100%;
+            border: 4px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .rounded-image-layout .image-wrapper {
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 30px;
+            font-size: 22px;
+        }
+
+        .bullet-list i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            font-size: 28px;
+            color: #22c55e;
+        }
+
+        /* Chart Styles */
+        .chart-container {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .bar {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .bar .label {
+            width: 300px;
+            text-align: right;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        .bar .bar-inner {
+            flex-grow: 1;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bar .bar-fill {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+            color: white;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .highlight-numbers-layout {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            align-items: center;
+        }
+
+        .highlight-numbers-layout .number {
+            font-size: 180px;
+            font-weight: 700;
+            color: #22c55e;
+            line-height: 1;
+            text-align: center;
+        }
+
+        /* Bleed Image Layout */
+        .bleed-image-layout {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            padding: 0;
+            align-items: start;
+        }
+
+        .bleed-image-layout .content-container {
+            padding: 60px;
+        }
+
+        .bleed-image-layout .image-container {
+            height: 720px;
+            overflow: hidden;
+        }
+
+        .bleed-image-layout img {
+            width: 100%;
+            height: 720px;
+            object-fit: cover;
+        }
+
+        .qa-layout {
+            text-align: center;
+        }
+
+        .qa-layout h2 {
+            font-size: 100px;
+            color: #22c55e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slide-container" id="slide1">
+        <div class="title-layout">
+            <h1>The Power of<br>the Safety Share</h1>
+            <p class="subtitle">Cultivating a Culture of Vigilance and Care Through Informal Dialogue</p>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide2">
+        <div class="section-title-layout">
+            <hr>
+            <h2>Defining the Safety Moment</h2>
+            <p class="subtitle">A brief, focused discussion that transforms personal insights into collective protection
+                at the start of every meeting.</p>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide3">
+        <h2 class="slide-title">Strategic Impact of Safety Shares</h2>
+        <div class="content-area">
+            <div class="two-column tiled">
+                <div>
+                    <h3>Proactive Prevention</h3>
+                    <p>Safety shares move the organizational focus from reacting to incidents to identifying risks
+                        before they manifest. By discussing near-misses, we build an early-warning system that saves
+                        lives.</p>
+                </div>
+                <div>
+                    <h3>Cultural Reinforcement</h3>
+                    <p>Regular shares signal that safety is a non-negotiable core value rather than a box-ticking
+                        exercise. It empowers every employee to act as a guardian of the team's well-being.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide4">
+        <h2 class="slide-title">The 3-Step Delivery Framework</h2>
+        <div class="content-area">
+            <div class="tiled-content">
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-comment-dots"></i></div>
+                    <h3>The Narrative</h3>
+                    <p>Start with a brief story or observation to ground the topic in reality. Real scenarios resonate
+                        far deeper than abstract rules.</p>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3>The Insight</h3>
+                    <p>Identify the root cause. Why did the hazard exist, and what was the moment of realization?
+                        Connect the dots for your audience.</p>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-check-double"></i></div>
+                    <h3>The Action</h3>
+                    <p>Finish with a clear, actionable step everyone can take immediately. Make the lesson tangible and
+                        easy to follow.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide5">
+        <h2 class="slide-title">Ergonomics: Small Shifts, Big Gains</h2>
+        <div class="content-area">
+            <div class="two-column rounded-image-layout" style="align-items: center;">
+                <div class="image-wrapper">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/17182597558691047654"
+                        alt="Correct ergonomic workstation setup">
+                </div>
+                <div>
+                    <h3>Posture as Protection</h3>
+                    <p>Cumulative trauma from poor ergonomics is a leading cause of workplace discomfort and long-term
+                        injury. Focus on the "90-90-90" rule: 90-degree angles for elbows, hips, and knees. Protect your
+                        future self by adjusting your workspace today.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container bleed-image-layout" id="slide6">
+        <div class="content-container">
+            <h2 class="slide-title">Power of Hazard Recognition</h2>
+            <div class="content-area">
+                <h3>Spotting the Invisible</h3>
+                <p>Hazard recognition is the foundation of all safety. Encouraging employees to use their "Stop Work
+                    Authority" isn't just about stopping mistakes—it's about empowering the team to look out for one
+                    another.</p>
+                <p>By sharing what we see, we train others' eyes to catch the next risk before it becomes an incident.
+                </p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/15073630039584155789"
+                alt="Worker pointing at hazard">
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide7">
+        <h2 class="slide-title">Safety at Home: Beyond the 9-to-5</h2>
+        <div class="content-area">
+            <div class="two-column">
+                <div>
+                    <h3>Continuous Vigilance</h3>
+                    <p>A true safety culture doesn't end when you punch out. Shared lessons about home smoke detectors,
+                        kitchen safety, or distracted driving reinforce the habit of vigilance in every aspect of life.
+                    </p>
+                    <p>Sharing "off-the-job" safety stories humanizes the topic and makes it relatable to our personal
+                        lives and families.</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/12965197561436545599"
+                        style="object-fit: contain;" alt="Smoke detector">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide8">
+        <h2 class="slide-title">Psychological Safety & Wellbeing</h2>
+        <div class="content-area">
+            <ul class="bullet-list">
+                <li><i class="fa-solid fa-shield-halved"></i> <strong>Open Reporting:</strong> A culture where
+                    near-misses are reported without fear of blame is a truly safe culture. Fear is a hazard.</li>
+                <li><i class="fa-solid fa-brain"></i> <strong>Mental Clarity:</strong> High stress and burnout are
+                    safety hazards; they lead to distraction, slow reaction times, and critical errors.</li>
+                <li><i class="fa-solid fa-heart-pulse"></i> <strong>Mutual Care:</strong> Checking in on colleagues'
+                    well-being is as vital as checking their PPE. A distracted mind is a risky mind.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide9">
+        <h2 class="slide-title">Standard PPE: Your Personal Shield</h2>
+        <div class="content-area">
+            <div class="tiled-content">
+                <div class="tile" style="padding: 10px;">
+                    <div class="image-wrapper" style="height: 250px; margin-bottom: 20px;">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/3242076905405706180"
+                            alt="Safety Goggles">
+                    </div>
+                    <h3>Vision Protection</h3>
+                    <p>Eye injuries can happen in a split second. Always wear rated glasses.</p>
+                </div>
+                <div class="tile" style="padding: 10px;">
+                    <div class="image-wrapper" style="height: 250px; margin-bottom: 20px;">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/14755235387812541735"
+                            alt="Hard Hat">
+                    </div>
+                    <h3>Head Defense</h3>
+                    <p>The primary shield against falling objects and impact hazards.</p>
+                </div>
+                <div class="tile" style="padding: 10px;">
+                    <div class="image-wrapper" style="height: 250px; margin-bottom: 20px;">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/10272724525489729353"
+                            alt="Safety Vest">
+                    </div>
+                    <h3>Visibility</h3>
+                    <p>Being seen is the first step to avoiding vehicle and machinery contact.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide10">
+        <h2 class="slide-title">Impact of Consistent Engagement</h2>
+        <div class="content-area">
+            <div class="chart-container">
+                <div class="bar">
+                    <div class="label">Weekly Safety Shares</div>
+                    <div class="bar-inner">
+                        <div class="bar-fill" style="width: 43%; background: #22c55e;">12% Incident Rate</div>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="label">Monthly Toolbox Talks</div>
+                    <div class="bar-inner">
+                        <div class="bar-fill" style="width: 65%; background: #eab308;">19% Incident Rate</div>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="label">Annual Training Only</div>
+                    <div class="bar-inner">
+                        <div class="bar-fill" style="width: 90%; background: #ef4444;">28% Incident Rate</div>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; font-style: italic;">Data indicates that consistent
+                engagement through daily/weekly shares reduces injury rates by over 50% compared to annual
+                compliance-only approaches.</p>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide11">
+        <h2 class="slide-title">The "5-Minute" Rule for Impact</h2>
+        <div class="content-area">
+            <div class="highlight-numbers-layout">
+                <div class="number">5</div>
+                <div>
+                    <h3>Maximum Duration</h3>
+                    <p>Safety shares should be punchy, focused, and high-impact. Research shows that beyond the
+                        five-minute mark, audience engagement drops and the core safety message begins to blur.</p>
+                    <p>Keep it simple: One story, one lesson, one action.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide12">
+        <div class="qa-layout">
+            <h2>Questions?</h2>
+            <p class="subtitle">Safety is not a department—it is a shared responsibility. We all go home safe, or nobody
+                does.</p>
+            <div style="margin-top: 50px; color: #eab308; font-weight: bold; font-size: 28px;">
+                What will you share tomorrow?
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

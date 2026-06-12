@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prairie First Aid | Booking & Certification</title>
+    <meta name="description"
+        content="Book your First Aid and CPR certifications with Prairie First Aid. View our courses, prices, and schedule your group or individual training today.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-heart-pulse"></i> Prairie First Aid
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">00. Home</a></li>
+                <li><a href="#courses">01. Courses</a></li>
+                <li><a href="#testimonials">02. Reviews</a></li>
+                <li><a href="#contact" class="btn-primary-sm">03. Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-text-content">
+                <div class="hero-badge-container">
+                    <span class="hero-badge badge-location">
+                        <i class="fa-solid fa-location-dot"></i> Saskatoon &amp; Surrounding Areas
+                    </span>
+                    <span class="hero-badge badge-tag">
+                        <i class="fa-solid fa-house-chimney"></i> Mobile &amp; At-Home
+                    </span>
+                </div>
+                <h1>Life-Saving Skills <br><span class="highlight-text">For The Prairies</span></h1>
+                <p class="hero-description">
+                    Get certified in First Aid &amp; CPR. Professional, engaging, and flexible training tailored to your schedule. 
+                    We bring the classroom to you—our certified instructor will come directly to your home or workplace!
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-primary">Book an Inquiry <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#courses" class="btn-secondary">Explore Courses</a>
+                </div>
+                
+                <!-- Trust signals -->
+                <div class="hero-trust-metrics">
+                    <div class="metric-item">
+                        <span class="metric-number">100%</span>
+                        <span class="metric-label">Certified Training</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-number">Flexible</span>
+                        <span class="metric-label">Mobile Classes</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual-content">
+                <div class="hero-image-wrapper">
+                    <img src="hero-cpr.jpg" alt="First aid training CPR practice" class="hero-main-image">
+                    <div class="hero-glow-blob"></div>
+                </div>
+                
+                <!-- Floating Glassmorphic Cards -->
+                <div class="floating-card floating-card-1">
+                    <div class="card-icon"><i class="fa-solid fa-car-side"></i></div>
+                    <div class="card-info">
+                        <h4>We Come to You</h4>
+                        <p>Instructor travels directly to your location</p>
+                    </div>
+                </div>
+                
+                <div class="floating-card floating-card-2">
+                    <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="card-info">
+                        <h4>Certified Standards</h4>
+                        <p>Fully compliant certifications &amp; CPR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section">
+        <div class="section-header">
+            <span class="section-badge-num">01 // COURSES</span>
+            <h2>Our Courses</h2>
+            <p>Select a course below. Prices are per person.</p>
+        </div>
+
+        <div class="course-grid" id="courseGrid">
+            <!-- Intermediate First Aid Courses -->
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                <h3>Intermediate First Aid</h3>
+                <div class="price">$170.00</div>
+                <p>Comprehensive two-day course offering first aid and CPR skills.</p>
+                <button class="btn-select-course" data-course="Intermediate First Aid">Inquire Now</button>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                <h3>Intermediate First Aid BLS</h3>
+                <div class="price">$180.00</div>
+                <p>Comprehensive first aid training including Basic Life Support.</p>
+                <button class="btn-select-course" data-course="Intermediate First Aid BLS">Inquire Now</button>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-rotate"></i></div>
+                <h3>Intermediate First Aid Recertification</h3>
+                <div class="price">$170.00</div>
+                <p>Update and refresh your Intermediate First Aid certification.</p>
+                <button class="btn-select-course" data-course="Intermediate First Aid Recertification">Inquire
+                    Now</button>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-sync"></i></div>
+                <h3>Intermediate First Aid BLS Recertification</h3>
+                <div class="price">$180.00</div>
+                <p>Refresh your Intermediate First Aid and Basic Life Support skills.</p>
+                <button class="btn-select-course" data-course="Intermediate First Aid BLS Recertification">Inquire
+                    Now</button>
+            </div>
+
+            <!-- Basic First Aid & Babysitting -->
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-truck-medical"></i></div>
+                <h3>Basic First Aid</h3>
+                <div class="price">$120.00</div>
+                <p>Fundamental one-day course covering emergency first aid situations.</p>
+                <button class="btn-select-course" data-course="Basic First Aid">Inquire Now</button>
+            </div>
+
+
+            <!-- CPR Courses -->
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-heartbeat"></i></div>
+                <h3>CPR "A" - Adult / AED</h3>
+                <div class="price">$70.00</div>
+                <p>Focuses strictly on CPR and AED skills for adults.</p>
+                <button class="btn-select-course" data-course="CPR &quot;A&quot; - Adult / AED">Inquire Now</button>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-hand-holding-medical"></i></div>
+                <h3>CPR "B" - Adult + Child & Infant / AED</h3>
+                <div class="price">$80.00</div>
+                <p>Comprehensive CPR and AED skills for adults, children, and infants.</p>
+                <button class="btn-select-course" data-course="CPR &quot;B&quot; - Adult + Child & Infant / AED">Inquire
+                    Now</button>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                <h3>CPR "C" - Adult, Child & Infant + Two Man Rescue / AED</h3>
+                <div class="price">$90.00</div>
+                <p>Advanced CPR skills including two-man rescue scenarios.</p>
+                <button class="btn-select-course"
+                    data-course="CPR &quot;C&quot; - Adult, Child & Infant + Two Man Rescue / AED">Inquire Now</button>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                <h3>CPR BLS</h3>
+                <div class="price">$100.00</div>
+                <p>Basic Life Support training designed for healthcare professionals.</p>
+                <button class="btn-select-course" data-course="CPR BLS">Inquire Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="section-header">
+            <span class="section-badge-num">02 // REVIEWS</span>
+            <h2>What Our Students Say</h2>
+            <p>Read about the experiences of individuals and groups who certified with us.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="star-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "The at-home course was amazing. The instructor came directly to our house and taught our whole family. Highly engaging, interactive, and comfortable!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-meta">
+                        <h4>Sarah Klassen</h4>
+                        <span class="author-sub">Saskatoon Resident • CPR "B"</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="star-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Hands down the best BLS training I've had. The instructor focused on practical skills and real-world scenarios rather than just running slides. Will definitely recertify here."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-meta">
+                        <h4>Marcus Tremblay</h4>
+                        <span class="author-sub">Nursing Student • CPR BLS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="star-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "We booked a group session for our corporate office. Having the instructor travel directly to our workplace saved us so much coordination time. Excellent training!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-meta">
+                        <h4>Jessica Loewen</h4>
+                        <span class="author-sub">HR Coordinator • Intermediate First Aid</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <span class="section-badge-num">03 // CONTACT</span>
+                <h2>Book a Session</h2>
+                <p>Currently, we are organizing custom sessions. Send us an inquiry with your preferred course and we
+                    will get back to you to coordinate a time and location. <strong>Remember, we offer at-home courses
+                        where our instructor can come directly to you!</strong></p>
+
+                <div class="info-items">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Service Area</h4>
+                            <p>Saskatoon &amp; Surrounding Areas</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:prairie1staid@gmail.com">prairie1staid@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+16395365245">639-536-5245</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form action="https://api.web3forms.com/submit" method="POST" id="bookingForm" class="contact-form">
+                    <input type="hidden" name="access_key" value="08c74316-c046-49e2-a7cc-71bf33e8c4f6">
+                    <input type="hidden" name="subject" value="New Booking Inquiry from Prairie First Aid Website">
+                    <input type="hidden" name="redirect" value="false">
+                    <input type="checkbox" name="botcheck" style="display:none;">
+                    <h3>Send an Inquiry</h3>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="courseSelection">Interested Course</label>
+                        <select id="courseSelection" name="courseSelection" required>
+                            <option value="" disabled selected>Select a course</option>
+                            <option value="Intermediate First Aid">Intermediate First Aid ($170)</option>
+                            <option value="Intermediate First Aid BLS">Intermediate First Aid BLS ($180)</option>
+                            <option value="Intermediate First Aid Recertification">Intermediate First Aid
+                                Recertification ($170)</option>
+                            <option value="Intermediate First Aid BLS Recertification">Intermediate First Aid BLS
+                                Recertification ($180)</option>
+                            <option value="Basic First Aid">Basic First Aid ($120)</option>
+                            <option value="CPR &quot;A&quot; - Adult / AED">CPR "A" - Adult / AED ($70)</option>
+                            <option value="CPR &quot;B&quot; - Adult + Child & Infant / AED">CPR "B" - Adult + Child &
+                                Infant / AED ($80)</option>
+                            <option value="CPR &quot;C&quot; - Adult, Child & Infant + Two Man Rescue / AED">CPR "C" -
+                                Adult, Child & Infant + Two Man Rescue / AED ($90)</option>
+                            <option value="CPR BLS">CPR BLS ($100)</option>
+                            <option value="Other">Other / Group Booking</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preferredDate">Preferred Date</label>
+                        <input type="date" id="preferredDate" name="preferredDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="secondaryDate">Secondary Preferred Date</label>
+                        <input type="date" id="secondaryDate" name="secondaryDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Message (Optional)</label>
+                        <textarea id="message" name="message" rows="3"
+                            placeholder="Any additional questions or details..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary w-100">Send Inquiry</button>
+                    <p class="form-disclaimer">Your inquiry will be sent directly to our team.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><i class="fa-solid fa-heart-pulse"></i> Prairie First Aid</h3>
+                <p>Empowering the prairies with life-saving knowledge and skills.</p>
+                <p><i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Saskatoon &amp; Surrounding Areas</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:prairie1staid@gmail.com"><i class="fa-solid fa-envelope"></i>
+                    prairie1staid@gmail.com</a>
+                <a href="tel:+16395365245"><i class="fa-solid fa-phone"></i> 639-536-5245</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Prairie First Aid. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
